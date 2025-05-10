@@ -4,16 +4,13 @@ import ResetButton from './ResetButton';
 import { calculateWinner } from '../utils/GameLogic';
 import { getAIMove } from './AIPlayer';
 import '../App.css';
-import clickSoundFile from '../sounds/click.wav';
-import winSoundFile from '../sounds/win.wav';
-import resetSoundFile from '../sounds/reset.wav';
+
 
 
 // Sound Effects
-const clickSound = new Audio(clickSoundFile);
-const winSound = new Audio(winSoundFile);
-const resetSound = new Audio(resetSoundFile);
-
+const clickSound = new Audio('/sounds/click.wav');
+const winSound = new Audio('/sounds/win.wav');
+const resetSound = new Audio('/sounds/reset.wav');
 
 
 const Board = ({ updateScore }) => {
