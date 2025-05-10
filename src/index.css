@@ -1,16 +1,11 @@
+/* 🎨 Global Styles */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary-color: #646cff;
+  --secondary-color: #535bf2;
+  --background-dark: #242424;
+  --background-light: #ffffff;
+  --text-dark: #213547;
+  --text-light: rgba(255, 255, 255, 0.87);
 }
 
 body {
@@ -22,43 +17,38 @@ body {
   min-width: 320px;
   min-height: 100vh;
   text-align: center;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
+/* 🔹 Game Container */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 90%;
+  max-width: 400px;
+  padding-top: 20px;
+
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: clamp(8px, 3vw, 14px);
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  font-weight: 500;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-/* 📌 Game Board Styling */
+/* 🎮 Board Styling */
 .board {
   display: grid;
-  grid-template-columns: repeat(3, minmax(20vw, 1fr));
+  grid-template-columns: repeat(3, minmax(90px, 1fr));
   gap: 10px;
-  max-width: 90%;
-  margin: auto;
+  padding: 20px;
+  background-color: var(--background-light);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: -30px;
+
 }
 
-/* 📌 Tic-Tac-Toe Squares */
+/* 🔹 Tic-Tac-Toe Squares */
 .square {
   width: min(20vw, 80px);
   height: min(20vw, 80px);
@@ -66,28 +56,39 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
   font-size: min(8vw, 2rem);
-  border: 2px solid #646cff;
-  background-color: #1a1a1a;
+  border: 2px solid var(--primary-color);
+  background-color: var(--background-dark);
+  color: var(--text-light);
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .square:hover {
-  background-color: #535bf2;
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
 }
 
-/* 📌 Centering for Mobile & Large Screens */
-.game-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full-screen centering */
-  width: 90%; /* Prevents overflow */
-  max-width: 400px;
+/* 🎭 Buttons */
+button {
+  border-radius: 8px;
+  border: none;
+  padding: clamp(8px, 3vw, 14px);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px;
+
 }
 
-/* 📌 Responsive Adjustments for Smaller Screens */
+button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive Adjustments */
 @media (max-width: 600px) {
   .board {
     grid-template-columns: repeat(3, 1fr);
@@ -104,4 +105,10 @@ button:focus-visible {
     font-size: 1em;
     padding: 10px 12px;
   }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Adjust for more or less spacing */
 }
