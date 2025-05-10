@@ -68,10 +68,10 @@ const Board = ({ updateScore }) => {
   return (
     <div className="game-container">
       <h2>{calculateWinner(squares) ? `Winner: ${calculateWinner(squares)}` : `Next Player: ${xIsNext ? 'X' : 'O'}`}</h2>
-      <button onClick={() => setIsMultiplayer(!isMultiplayer)}>
+      <button class="Multiplayer-Button" onClick={() => setIsMultiplayer(!isMultiplayer)}>
         {isMultiplayer ? "Switch to AI Mode" : "Switch to Multiplayer"}
       </button>
-      <button onClick={() => setDifficulty(difficulty === "Hard" ? "Medium" : difficulty === "Medium" ? "Easy" : "Hard")}>
+      <button class="Difficulty-Button" onClick={() => setDifficulty(difficulty === "Hard" ? "Medium" : difficulty === "Medium" ? "Easy" : "Hard")}>
         AI Difficulty: {difficulty}
       </button>
       <div className="board">
