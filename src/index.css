@@ -23,11 +23,11 @@ a:hover {
 }
 
 body {
-  margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full screen height */
+  margin: 0;
 }
 
 h1 {
@@ -45,11 +45,13 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: .5em .5em .5em .5em
+
 }
 button:hover {
   border-color: #646cff;
 }
-button:focus,
+
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
@@ -66,3 +68,31 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Adjust spacing between squares */
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
