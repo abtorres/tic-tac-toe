@@ -8,9 +8,9 @@ import '../App.css';
 
 
 // Sound Effects
-const clickSoundFile = "/src/sounds/click.wav";
-const winSoundFile = "/src/sounds/win.wav";
-const resetSoundFile = "/src/sounds/reset.wav";
+const clickSoundFile = "/src/assets/click.wav";
+const winSoundFile = "/src/assets/win.wav";
+const resetSoundFile = "/src/assets/reset.wav";
 
 const winSound = new Audio(winSoundFile);
 const clickSound = new Audio(clickSoundFile);
