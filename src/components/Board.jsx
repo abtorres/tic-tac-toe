@@ -4,7 +4,7 @@ import ResetButton from './ResetButton';
 import { calculateWinner } from '../utils/GameLogic';
 import { getAIMove } from './AIPlayer';
 import '../App.css';
-import clickSoundFile from '../sounds/click.wav';
+import clickSoundFile from '../sounds/click-JolwwTm_.wav';
 import winSoundFile from '../sounds/win.wav';
 import resetSoundFile from '../sounds/reset.wav';
 
