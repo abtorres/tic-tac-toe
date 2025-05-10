@@ -8,7 +8,7 @@ import '../App.css';
 
 
 // Sound Effects
-const clickSoundFile = "tic-tac-toe/public/sounds/click.wav";
+const clickSoundFile = "./public/sounds/click.wav";
 const winSoundFile = "./public/sounds/win.wav";
 const resetSoundFile = "./public/sounds/reset.wav";
 
