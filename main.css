@@ -32,7 +32,7 @@
   button {
     border-radius: 8px;
     border: 1px solid transparent;
-    padding: 0.6em 1.2em;
+    padding: clamp(8px, 3vw, 14px);
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     font-weight: 500;
     background-color: #1a1a1a;
@@ -58,13 +58,14 @@
     margin: auto;
   }
   
+  /* 📌 Tic-Tac-Toe Squares */
   .square {
-    width: 100px;
-    height: 100px;
+    width: min(20vw, 80px);
+    height: min(20vw, 80px);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: min(8vw, 2rem);
     border: 2px solid #646cff;
     background-color: #1a1a1a;
     cursor: pointer;
@@ -75,7 +76,18 @@
     background-color: #535bf2;
   }
   
-  /* 📌 Responsive Design */
+  /* 📌 Centering for Mobile & Large Screens */
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures full-screen centering */
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* 📌 Responsive Adjustments for Smaller Screens */
   @media (max-width: 600px) {
     .board {
       grid-template-columns: repeat(3, 1fr);
@@ -92,14 +104,4 @@
       font-size: 1em;
       padding: 10px 12px;
     }
-  }
-  
-  /* 📌 Centering for Mobile & Large Screens */
-  .game-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
   }
