@@ -8,9 +8,14 @@ import '../App.css';
 
 
 // Sound Effects
-const clickSound = new Audio('/sounds/click.wav');
-const winSound = new Audio('/sounds/win.wav');
-const resetSound = new Audio('/sounds/reset.wav');
+const clickSoundFile = "/sounds/click.wav";
+const winSoundFile = "/sounds/win.wav";
+const resetSoundFile = "/sounds/reset.wav";
+
+const winSound = new Audio(winSoundFile);
+const clickSound = new Audio(clickSoundFile);
+const resetSound = new Audio(resetSoundFile);
+
 
 
 const Board = ({ updateScore }) => {
